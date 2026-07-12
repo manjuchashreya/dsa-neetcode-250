@@ -1,0 +1,5 @@
+# Build artifacts
+*.out
+*.o
+a.out
+.DS_Store
