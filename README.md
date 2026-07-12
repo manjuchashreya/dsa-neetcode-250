@@ -1,24 +1,28 @@
-# dsa-neetcode-250
+# DSA NeetCode 250 Journey
 
-My solutions to the NeetCode 250 problems, written in C++.
+Language: C++
+Goal: Become interview-ready in 3 months.
 
-## Structure
+Current progress:
 
-```
-dsa-neetcode-250/
-├── README.md
-├── day01/          # daily problem sets
-└── notes/          # concepts, patterns, mistakes worth remembering
-```
+* Day 1 started
+* Topic: C++ vectors
+* Print vector: Completed
+* Sum of vector: Completed
+* Maximum in vector: Completed with correction
+* Copy vector: Completed with correction
+* Concatenation of Array: Not started
+* Contains Duplicate: Not started
 
-## Progress
+Status system:
 
-| Day | Topics | Problems |
-|-----|--------|----------|
-| 01  | Arrays & Hashing (warm-ups) | Concatenation of Array, Contains Duplicate |
+* Green: Solved independently
+* Yellow: Needed a hint or correction
+* Red: Needed the full solution
 
-## Conventions
+Revision schedule:
 
-- One `.cpp` file per problem, named after the problem.
-- Main NeetCode problems are always saved.
-- Warm-ups are saved only when they teach something important or contain a mistake worth remembering.
+* Review after 1 day
+* Review after 3 days
+* Review after 7 days
+* Review after 14 days
