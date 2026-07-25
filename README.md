@@ -31,8 +31,8 @@ Progress:
 - [x] Day 1 revision
 - [x] `unordered_map` basics (see `notes/day02_hashing_notes.md`)
 - [x] Frequency counting (`day02/01_frequency_count.cpp`)
-- [ ] Finding a target
-- [ ] Counting target occurrences
+- [x] Finding a target (`day02/02_find_target.cpp`)
+- [x] Counting target occurrences (`day02/03_count_target.cpp`)
 - [ ] Valid Anagram
 - [ ] Two Sum
 
