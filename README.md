@@ -33,8 +33,8 @@ Progress:
 - [x] Frequency counting (`day02/01_frequency_count.cpp`)
 - [x] Finding a target (`day02/02_find_target.cpp`)
 - [x] Counting target occurrences (`day02/03_count_target.cpp`)
-- [ ] Valid Anagram
-- [ ] Two Sum
+- [x] Valid Anagram (`day02/04_valid_anagram.cpp`)
+- [x] Two Sum (`day02/05_two_sum.cpp`)
 
 Status system:
 
