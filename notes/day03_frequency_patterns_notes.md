@@ -83,6 +83,25 @@ Map vs array:
 
 For this problem the array is technically preferable, but the map version reinforces the hashing pattern.
 
+### Revision recall
+
+Pattern: character frequency + a second ordered scan.
+
+* **Pass 1:** `frequency[ch]++`
+* **Pass 2:** if `frequency[s[i]] == 1`, return `i`
+
+Why two passes?
+
+* Need complete counts first.
+* Need the original string order to find the *first* unique character.
+
+Complexity:
+
+* Time: `O(n)`
+* Space: `O(k)` with `unordered_map`, `O(1)` with an array of 26
+
+Common mistake: return the **index**, not the character.
+
 ## Revision schedule
 
 - [ ] Review after 1 day
