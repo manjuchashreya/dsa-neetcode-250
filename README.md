@@ -45,7 +45,7 @@ Focus: majority counting, sorting vs hashing, Boyer–Moore voting, two-pass fre
 Progress:
 
 - [x] Majority Element — 4 approaches (`day03/01_majority_element.cpp`), notes in `notes/day03_frequency_patterns_notes.md`
-- [ ] First Unique Character in a String
+- [x] First Unique Character in a String — 3 approaches (`day03/02_first_unique_character.cpp`)
 - [ ] Revision: Contains Duplicate, Valid Anagram, Two Sum
 
 Status system:

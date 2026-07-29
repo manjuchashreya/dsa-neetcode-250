@@ -10,6 +10,7 @@ Algorithm, and two-pass frequency problems.
 | Problem | Pattern | Difficulty | Status | Best Time | Best Space | Code |
 | ------- | ------- | ---------- | ------ | --------- | ---------- | ---- |
 | Majority Element | Boyer–Moore voting | Easy | Green | O(n) | O(1) | `day03/01_majority_element.cpp` |
+| First Unique Character | Frequency count (2-pass) | Easy | Green | O(n) | O(1) | `day03/02_first_unique_character.cpp` |
 
 ---
 
@@ -60,6 +61,27 @@ for (int num : nums) {
 }
 return candidate;
 ```
+
+## First Unique Character in a String
+
+Goal: return the index of the first non-repeating character, or `-1` if none.
+
+Why `-1`? Indexes start at `0`, so `-1` means "no valid index exists".
+
+Approaches and complexity:
+
+| # | Approach              | Time   | Space |
+| - | --------------------- | ------ | ----- |
+| 1 | Brute force           | O(n^2) | O(1)  |
+| 2 | Hash map (2-pass)     | O(n)   | O(k)  |
+| 3 | Size-26 array (2-pass)| O(n)   | O(1)  |
+
+Map vs array:
+
+* Use a **map** when the character set is broad/unknown or you want a general solution.
+* Use a **size-26 array** when input is only lowercase English letters — lower overhead, constant extra space.
+
+For this problem the array is technically preferable, but the map version reinforces the hashing pattern.
 
 ## Revision schedule
 
