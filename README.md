@@ -38,6 +38,16 @@ Progress:
 - [x] Valid Anagram (`day02/04_valid_anagram.cpp`)
 - [x] Two Sum (`day02/05_two_sum.cpp`)
 
+## Day 3 — Frequency Patterns
+
+Focus: majority counting, sorting vs hashing, Boyer–Moore voting, two-pass frequency.
+
+Progress:
+
+- [x] Majority Element — 4 approaches (`day03/01_majority_element.cpp`), notes in `notes/day03_frequency_patterns_notes.md`
+- [ ] First Unique Character in a String
+- [ ] Revision: Contains Duplicate, Valid Anagram, Two Sum
+
 Status system:
 
 * Green: Solved independently
