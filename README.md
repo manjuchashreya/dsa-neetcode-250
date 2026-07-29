@@ -48,6 +48,16 @@ Progress:
 - [x] First Unique Character in a String — 3 approaches (`day03/02_first_unique_character.cpp`)
 - [ ] Revision: Contains Duplicate, Valid Anagram, Two Sum
 
+## Day 4 — Strings and Two Pointers
+
+Focus: C++ strings in depth, `<cctype>` character functions, two-pointer technique (opposite + same direction). Notes: `notes/day04_strings_two_pointers_notes.md`.
+
+Progress:
+
+- [x] Concepts + warm-ups: print characters, count vowels, reverse string, simple palindrome (`day04/01`–`04`)
+- [ ] Valid Palindrome
+- [ ] Is Subsequence
+
 Status system:
 
 * Green: Solved independently
