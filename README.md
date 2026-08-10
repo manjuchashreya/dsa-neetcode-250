@@ -4,6 +4,7 @@ Language: C++
 Goal: Become interview-ready in 3 months.
 
 Full roadmap: see [PLAN.md](PLAN.md) — 12-week, 6-day/week interview plan (~150 problems).
+Dated day-by-day schedule (Aug 10–20): see [SCHEDULE.md](SCHEDULE.md).
 
 ## Current Progress
 
