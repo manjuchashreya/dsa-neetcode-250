@@ -25,11 +25,7 @@ int main() {
         right--;
     }
 
-    if (palindrome) {
-        cout << "true";
-    } else {
-        cout << "false";
-    }
+    cout << (palindrome ? "true" : "false");
 
     return 0;
 }
