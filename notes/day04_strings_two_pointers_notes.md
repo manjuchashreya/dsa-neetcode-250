@@ -15,7 +15,7 @@ Palindrome and Is Subsequence.
 | Reverse a string   | Warm-up | Green | `day04/03_reverse_string.cpp` |
 | Simple palindrome  | Warm-up | Green | `day04/04_simple_palindrome.cpp` |
 | Valid Palindrome   | Main    | Green | `day04/05_valid_palindrome.cpp` |
-| Is Subsequence     | Main    | Not started | — |
+| Is Subsequence     | Main    | Green | `day04/06_is_subsequence.cpp` |
 
 ---
 

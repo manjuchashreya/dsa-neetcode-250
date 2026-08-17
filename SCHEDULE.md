@@ -4,7 +4,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started
 
 ---
 
-## ✅ Aug 10 — Day 4: Strings + Two Pointers  🟡 (warm-ups done, 2 problems left)
+## ✅ Aug 10 — Day 4: Strings + Two Pointers  ✅ complete
 
 Concepts: `string`, `char`, `s[i]`, `s.size()`, `isalnum`, `tolower`, opposite-direction two pointers.
 
@@ -15,8 +15,8 @@ Warm-ups:
 
 Main problems:
 
-1. [ ] Valid Palindrome
-2. [ ] Is Subsequence
+1. [x] Valid Palindrome (`day04/05_valid_palindrome.cpp`)
+2. [x] Is Subsequence (`day04/06_is_subsequence.cpp`)
 
 Mini-test: explain why two pointers work for palindrome · dry-run `"racecar"`.
 

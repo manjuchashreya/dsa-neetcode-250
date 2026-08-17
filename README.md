@@ -57,7 +57,7 @@ Progress:
 
 - [x] Concepts + warm-ups: print characters, count vowels, reverse string, simple palindrome (`day04/01`–`04`)
 - [x] Valid Palindrome — 2 approaches (`day04/05_valid_palindrome.cpp`)
-- [ ] Is Subsequence
+- [x] Is Subsequence (`day04/06_is_subsequence.cpp`)
 
 Status system:
 
