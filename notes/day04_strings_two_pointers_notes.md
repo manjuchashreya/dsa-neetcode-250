@@ -14,7 +14,7 @@ Palindrome and Is Subsequence.
 | Count vowels       | Warm-up | Green | `day04/02_count_vowels.cpp` |
 | Reverse a string   | Warm-up | Green | `day04/03_reverse_string.cpp` |
 | Simple palindrome  | Warm-up | Green | `day04/04_simple_palindrome.cpp` |
-| Valid Palindrome   | Main    | Not started | — |
+| Valid Palindrome   | Main    | Green | `day04/05_valid_palindrome.cpp` |
 | Is Subsequence     | Main    | Not started | — |
 
 ---

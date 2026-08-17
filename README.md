@@ -56,7 +56,7 @@ Focus: C++ strings in depth, `<cctype>` character functions, two-pointer techniq
 Progress:
 
 - [x] Concepts + warm-ups: print characters, count vowels, reverse string, simple palindrome (`day04/01`–`04`)
-- [ ] Valid Palindrome
+- [x] Valid Palindrome — 2 approaches (`day04/05_valid_palindrome.cpp`)
 - [ ] Is Subsequence
 
 Status system:
