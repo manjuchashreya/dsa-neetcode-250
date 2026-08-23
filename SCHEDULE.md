@@ -1,155 +1,215 @@
-# Day-by-Day Schedule (Aug 10 – Aug 20)
+# Day-by-Day Schedule (Aug 23 → Sep 30, + October outline)
 
 Legend: ✅ done · 🟡 in progress · ⬜ not started
 
----
-
-## ✅ Aug 10 — Day 4: Strings + Two Pointers  ✅ complete
-
-Concepts: `string`, `char`, `s[i]`, `s.size()`, `isalnum`, `tolower`, opposite-direction two pointers.
-
-Warm-ups:
-
-- [x] Reverse a string (`day04/03_reverse_string.cpp`)
-- [x] Simple palindrome check (`day04/04_simple_palindrome.cpp`)
-
-Main problems:
-
-1. [x] Valid Palindrome (`day04/05_valid_palindrome.cpp`)
-2. [x] Is Subsequence (`day04/06_is_subsequence.cpp`)
-
-Mini-test: explain why two pointers work for palindrome · dry-run `"racecar"`.
-
-## ⬜ Aug 11 — Day 5: Right-to-left + Prefix/Suffix
-
-Concepts: reverse traversal, running maximum, prefix, suffix, prefix/suffix products.
-
-Warm-ups: suffix maximum · prefix sum.
-
-Main problems:
-
-3. [ ] Replace Elements with Greatest Element on Right Side
-4. [ ] Product of Array Except Self
-
-Mini-test: build prefix values manually for `[2,3,4]` · explain why Product Except Self can avoid division.
-
-## ⬜ Aug 12 — Day 6: Revision + Hashing Reinforcement
-
-Revision: Contains Duplicate · Valid Anagram · Two Sum · Majority Element.
-
-New related problems:
-
-5. [ ] Ransom Note
-6. [ ] Intersection of Two Arrays
-
-Focus: `unordered_map`, `unordered_set`, frequency counting, existence checks.
-Timed re-solve: Two Sum or Valid Anagram.
-
-## ⬜ Aug 13 — Day 7: Week 1 Test + Mixed Practice
-
-Revision: one Green problem · two Yellow problems · explain one solution aloud.
-
-New related problems:
-
-7. [ ] Single Number
-8. [ ] Move Zeroes
-
-Focus: array traversal, in-place updates, two-pointer intro, XOR intro for Single Number.
-Weekly check: identify whether a problem needs Set / Map / Frequency / Two pointers / Prefix-suffix.
-
-## ⬜ Aug 14 — Day 8: Two Pointers in Sorted Arrays
-
-Concepts: sorted-array advantage, left/right pointer movement, why to move left or right, in-place modification.
-
-Warm-ups: pair sum in sorted array · remove duplicates manually.
-
-Main problems:
-
-9. [ ] Two Sum II
-10. [ ] Remove Duplicates from Sorted Array
-
-Mini-test: given a sorted array and target, explain which pointer moves and why.
-
-## ⬜ Aug 15 — Day 9: Advanced Two Pointers
-
-Concepts: sort + two pointers, fix-one-element strategy, skipping duplicates, pointer decisions based on sum.
-
-Main problems:
-
-11. [ ] 3Sum
-12. [ ] Container With Most Water
-
-Mini-test: explain why 3Sum is `O(n²)` · why brute-force Container With Most Water is `O(n²)`.
-
-## ⬜ Aug 16 — Day 10: Sliding Window Basics
-
-Concepts: what a window is, fixed-size window, variable-size window, expand right, shrink left, window state.
-
-Warm-ups: maximum sum of `k` consecutive elements · sum of every window of size `k`.
-
-Main problems:
-
-13. [ ] Best Time to Buy and Sell Stock
-14. [ ] Longest Substring Without Repeating Characters
-
-Mini-test: difference between two pointers and sliding window.
-
-## ⬜ Aug 17 — Day 11: Sliding Window + Frequency
-
-Concepts: window with map/set, removing left-side state, maintaining validity.
-
-Main problems:
-
-15. [ ] Permutation in String
-16. [ ] Longest Repeating Character Replacement
-
-Warm-up: count character frequency inside a moving window.
-Mini-test: given a window, explain when to shrink it.
-
-## ⬜ Aug 18 — Day 12: Revision + Sliding Window Reinforcement
-
-Revision: Two Sum II · 3Sum · Longest Substring Without Repeating Characters · Best Time to Buy/Sell Stock.
-
-New related problems:
-
-17. [ ] Minimum Size Subarray Sum
-18. [ ] Max Consecutive Ones III
-
-Focus: variable sliding window, shrink/expand logic.
-Timed re-solve: Longest Substring Without Repeating Characters.
-
-## ⬜ Aug 19 — Day 13: Stack Fundamentals
-
-Concepts: LIFO, `stack<int>`, `push`, `pop`, `top`, `empty`, when a stack is useful.
-
-Warm-ups: push/pop simulation · reverse a sequence with a stack.
-
-Main problems:
-
-19. [ ] Valid Parentheses
-20. [ ] Baseball Game
-
-Mini-test: explain why Valid Parentheses is naturally a stack problem.
-
-## ⬜ Aug 20 — Day 14: Stack Patterns + Weekly Test
-
-Concepts: storing previous information, stack of values vs stack of indexes, monotonic stack intro.
-
-Revision: Valid Parentheses · one sliding-window problem · one two-pointer problem.
-
-New related problems:
-
-21. [ ] Min Stack
-22. [ ] Daily Temperatures
-
-Weekly test: 1 easy in 20 min · 1 medium in 35–40 min · explain both aloud · state time/space · update tracker.
+> **The real success metric is pattern recognition, not "finished the calendar."**
+> By the end, you should look at a new problem and instantly say things like:
+> - "This smells like **sliding window** — I need a contiguous range."
+> - "This is **same-direction two pointers** — I'm compacting in place."
+> - "This is **BFS** — I need shortest layers."
+> - "This is **DP** — I'm reusing solutions to overlapping subproblems."
 
 ---
 
-## Coverage target by Aug 20
+## Aug 23–31 — Finish Arrays / Hashing / Two Pointers / Sliding Window
 
-Core C++/STL: `vector` · `string` · `unordered_set` · `unordered_map` · `stack`
+### Aug 23 — revision + new
+- [ ] Two Sum (revision)
+- [ ] Valid Palindrome (revision)
+- [ ] Majority Element (revision)
+- [ ] Move Zeroes (revision)
+- [ ] Find All Duplicates in an Array
 
-Patterns: array traversal · hashing · frequency counting · number → index · Boyer–Moore ·
-prefix/suffix · opposite-direction two pointers · same-direction two pointers ·
-sliding window · basic stack · monotonic-stack introduction
+### Aug 24
+- [ ] Ransom Note
+- [ ] Intersection of Two Arrays
+- [ ] Remove Duplicates from Sorted Array
+
+### Aug 25
+- [ ] Replace Elements with Greatest Element on Right Side
+- [ ] Product of Array Except Self
+
+### Aug 26
+- [ ] Two Sum II
+- [ ] Squares of a Sorted Array
+
+### Aug 27
+- [ ] 3Sum
+- [ ] Container With Most Water
+
+### Aug 28 — revision + new
+- [ ] Product of Array Except Self (revision)
+- [ ] 3Sum (revision)
+- [ ] Remove Element
+- [ ] Sort Colors
+
+### Aug 29
+- [ ] Best Time to Buy and Sell Stock
+- [ ] Longest Substring Without Repeating Characters
+
+### Aug 30
+- [ ] Permutation in String
+- [ ] Longest Repeating Character Replacement
+
+### Aug 31 — revision + new
+- [ ] Minimum Size Subarray Sum
+- [ ] Max Consecutive Ones III
+
+---
+
+## Sep 1–7 — Stack + Binary Search
+
+### Sep 1  *(adjusted: one major new problem only)*
+- [ ] Minimum Window Substring  ← the only major new problem today
+- [ ] Light sliding-window review (revisit a prior window problem, not a full new medium)
+
+### Sep 2
+- [ ] Valid Parentheses
+- [ ] Baseball Game
+
+### Sep 3
+- [ ] Min Stack
+- [ ] Daily Temperatures
+
+### Sep 4
+- [ ] Evaluate Reverse Polish Notation
+- [ ] Car Fleet
+
+### Sep 5 — Binary Search concepts
+- [ ] Binary Search
+- [ ] Search a 2D Matrix
+
+### Sep 6
+- [ ] Koko Eating Bananas
+- [ ] Find Minimum in Rotated Sorted Array
+
+### Sep 7 — revision + new
+- [ ] Search in Rotated Sorted Array
+- [ ] Find Peak Element
+- [ ] Stack / Binary Search revision
+
+---
+
+## Sep 8–14 — Linked Lists
+
+### Sep 8
+- [ ] Reverse Linked List
+- [ ] Merge Two Sorted Lists
+
+### Sep 9
+- [ ] Linked List Cycle
+- [ ] Middle of the Linked List
+
+### Sep 10
+- [ ] Remove Linked List Elements
+- [ ] Remove Nth Node From End
+
+### Sep 11
+- [ ] Reorder List
+- [ ] Add Two Numbers
+
+### Sep 12
+- [ ] Copy List With Random Pointer
+- [ ] Find the Duplicate Number
+
+### Sep 13  *(adjusted: keep it light)*
+- [ ] LRU Cache  ← heavy implementation, give it the day
+- [ ] One VERY easy linked-list reinforcement only
+
+### Sep 14 — revision + new
+- [ ] Palindrome Linked List
+- [ ] Intersection of Two Linked Lists
+
+---
+
+## Sep 15–21 — Trees + BST
+
+### Sep 15
+- [ ] Invert Binary Tree
+- [ ] Maximum Depth of Binary Tree
+
+### Sep 16
+- [ ] Same Tree
+- [ ] Balanced Binary Tree
+
+### Sep 17
+- [ ] Diameter of Binary Tree
+- [ ] Subtree of Another Tree
+
+### Sep 18
+- [ ] Binary Tree Level Order Traversal
+- [ ] Binary Tree Right Side View
+
+### Sep 19
+- [ ] Count Good Nodes in Binary Tree
+- [ ] Lowest Common Ancestor of a BST
+
+### Sep 20
+- [ ] Validate Binary Search Tree
+- [ ] Kth Smallest Element in a BST
+
+### Sep 21 — revision + new
+- [ ] Path Sum
+- [ ] Minimum Depth of Binary Tree
+
+---
+
+## Sep 22–27 — Heap + Backtracking
+
+### Sep 22 — Heap concepts
+- [ ] Kth Largest Element in a Stream
+- [ ] Last Stone Weight
+
+### Sep 23
+- [ ] K Closest Points to Origin
+- [ ] Kth Largest Element in an Array
+
+### Sep 24  *(adjusted: fresh solve, not revision)*
+- [ ] Task Scheduler
+- [ ] Top K Frequent Elements — FRESH solve (discuss heap vs bucket-sort)
+
+### Sep 25 — Backtracking concepts
+- [ ] Subsets
+- [ ] Permutations
+
+### Sep 26
+- [ ] Combination Sum
+- [ ] Subsets II
+
+### Sep 27 — revision + new  *(adjusted)*
+- [ ] Combination Sum II  ← main problem
+- [ ] Letter Combinations of a Phone Number  *(optional / extra if time remains)*
+
+---
+
+## Sep 28–30 — Graph Foundation  *(foundation, NOT "graphs completed")*
+
+### Sep 28 — Graph concepts
+Learn: graph representation, adjacency list, BFS, DFS, visited set.
+- [ ] Number of Islands
+- [ ] Max Area of Island
+
+### Sep 29
+- [ ] Clone Graph
+- [ ] Rotting Oranges
+
+### Sep 30 — checkpoint + new
+- [ ] Pacific Atlantic Water Flow
+- [ ] Islands and Treasure (Walls and Gates)
+- [ ] Full September assessment
+
+---
+
+## Milestones
+
+- **By Sep 30:** strong foundations through BFS/DFS graphs (arrays, hashing, two
+  pointers, sliding window, stack, binary search, linked lists, trees/BST, heap,
+  backtracking, and graph *foundations*).
+
+## October outline — DP is reserved FIRST, so it is never postponed
+
+- **Oct 1–10:** **1-D Dynamic Programming** (recursion → memoization → tabulation →
+  space optimization). This slot is locked in first, on purpose.
+- **Then, in order:** advanced graphs (topological sort, union-find, shortest path)
+  → greedy & intervals → tries → bit manipulation & math → **2-D DP** → mixed
+  revision + 4–6 mock interviews.
