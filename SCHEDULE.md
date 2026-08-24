@@ -13,12 +13,14 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started
 
 ## Aug 23–31 — Finish Arrays / Hashing / Two Pointers / Sliding Window
 
-### Aug 23 — revision + new
-- [ ] Two Sum (revision)
+### Aug 23 (Sunday) — revision + new
+- [x] Two Sum (revision) — 🟡 syntax recall
 - [ ] Valid Palindrome (revision)
 - [ ] Majority Element (revision)
 - [ ] Move Zeroes (revision)
 - [ ] Find All Duplicates in an Array
+- [ ] Contains Nearby Duplicate (extra new — hashing / sliding-window set)
+- [ ] Move All Negative Numbers to One Side (extra new — two-pointer partition)
 
 ### Aug 24
 - [ ] Ransom Note
