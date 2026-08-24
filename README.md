@@ -49,6 +49,12 @@ Progress:
 - [x] First Unique Character in a String — 3 approaches (`day03/02_first_unique_character.cpp`)
 - [ ] Revision: Contains Duplicate, Valid Anagram, Two Sum
 
+## Day 5 (Aug 24) — Hashing + Two Pointers
+
+- [x] Ransom Note (`day05/01_ransom_note.cpp`)
+- [x] Intersection of Two Arrays (`day05/02_intersection_of_two_arrays.cpp`)
+- [x] Remove Duplicates from Sorted Array (`day05/03_remove_duplicates_sorted_array.cpp`)
+
 ## Day 4 — Strings and Two Pointers
 
 Focus: C++ strings in depth, `<cctype>` character functions, two-pointer technique (opposite + same direction). Notes: `notes/day04_strings_two_pointers_notes.md`.

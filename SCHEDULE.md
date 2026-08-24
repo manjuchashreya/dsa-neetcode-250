@@ -22,10 +22,10 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started
 - [ ] Contains Nearby Duplicate (extra new — hashing / sliding-window set)
 - [ ] Move All Negative Numbers to One Side (extra new — two-pointer partition)
 
-### Aug 24
-- [ ] Ransom Note
-- [ ] Intersection of Two Arrays
-- [ ] Remove Duplicates from Sorted Array
+### Aug 24 (Monday)
+- [x] Ransom Note (`day05/01_ransom_note.cpp`) — frequency counting
+- [x] Intersection of Two Arrays (`day05/02_intersection_of_two_arrays.cpp`) — set membership
+- [x] Remove Duplicates from Sorted Array (`day05/03_remove_duplicates_sorted_array.cpp`) — slow/fast pointers
 
 ### Aug 25
 - [ ] Replace Elements with Greatest Element on Right Side
