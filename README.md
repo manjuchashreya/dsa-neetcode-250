@@ -1,6 +1,6 @@
 # DSA NeetCode 250 Journey
 
-Language: C++
+Language: C++ (primary) and Python — bilingual. Solutions may appear as `.cpp`, `.py`, or both.
 Goal: Become interview-ready in 3 months.
 
 Full roadmap: see [PLAN.md](PLAN.md) — 12-week, 6-day/week interview plan (~150 problems).
