@@ -78,7 +78,7 @@ Legend: ✅ done · 🟡 in progress · ⬜ not started
 - [ ] Car Fleet
 
 ### Sep 5 — Binary Search concepts
-- [ ] Binary Search
+- [x] Binary Search (done Oct 12, Python, 🟡 — `day06/01_binary_search.py`)
 - [ ] Search a 2D Matrix
 
 ### Sep 6
