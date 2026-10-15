@@ -18,6 +18,8 @@ index** (35). Language: Python.
 | 278 First Bad Version | Boundary — first True | 🟢 (1 fix) | O(log n) | O(1) | `day07/03_first_bad_version.py` |
 | 34 First & Last Position | Duplicates — two boundary searches | 🟢 (key insight) | O(log n) | O(1) | `day07/04_first_last_position.py` |
 | 744 Next Greatest Letter | First strictly greater + wrap-around | 🟢 | O(log n) | O(1) | `day07/05_next_greatest_letter.py` |
+| 852 Peak in Mountain Array | Neighbor compare (no target) | 🟢 (2 bugs) | O(log n) | O(1) | `day07/06_peak_index_mountain_array.py` |
+| 162 Find Peak Element | Neighbor compare, multiple peaks | 🟢 (OOB fix) | O(log n) | O(1) | `day07/07_find_peak_element.py` |
 
 ## The core template (A — exact match)
 
@@ -119,6 +121,29 @@ element in a circular array (`nums[(i + 1) % n]`).
 - **374:** no array — search the values `1 .. n` directly; an API tells you the
   direction. This is the first step toward **binary search on the answer**.
 
+## Binary search without a sorted array — the True/False split (852, 162)
+
+Binary search doesn't actually need a *sorted* array. It needs a **monotone
+True/False split**. Comparing each element with its **neighbor** creates one:
+
+- `arr[mid] < arr[mid+1]` → still **climbing** → a peak is to the right (`l = mid + 1`)
+- else → **descending / at peak** → peak is `mid` or left (`h = mid - 1`)
+
+The split is ✅✅❌❌ ("is the next one bigger?"), and the peak is the first ❌ →
+return `l` (same as 278 / 744).
+
+**Why it works with multiple peaks (162):** if the right neighbor is bigger,
+walking right *must* hit a peak (it keeps rising to the end, or turns down).
+Each step discards a half that *might* contain a peak but always keeps a half
+that *definitely* does.
+
+**Reuse warning (852 → 162):** the same code, but 852's safety argument does NOT
+carry over. In 852 the peak is never the last element, so `mid+1` is always
+safe. In 162 the peak *can* be last (`[1,2,3]`), so the naive copy crashes.
+Fix: `h = len-2` (Option 1, keeps `<=`) or Template B (`h=len-1`, `while l<h`,
+`h=mid`). **Lesson: when you reuse a solution, re-check every array access
+against the new constraints.**
+
 ## Recurring checklist (run before submitting ANY binary search)
 
 1. Inclusive bounds → `while low <= high` (Template A). *(Write this line FIRST — missed it on 704, 374, and 69.)*
@@ -128,6 +153,7 @@ element in a circular array (`nums[(i + 1) % n]`).
 5. Does `low` cover the smallest possible answer (e.g. `0` for Sqrt)?
 6. Is there a `return` after the loop?
 7. Return value — `low` (just above) or `high` (just below)? Index or value?
+8. Every `nums[mid+1]` / `nums[mid-1]`: can `mid` be at an edge? Trace the smallest input (`[1]`, `[1,2]`) before submitting.
 
 > Overflow note: in C++/Java `low + high` can overflow, so use
 > `low + (high - low) // 2`. Python ints don't overflow, but mention it.
