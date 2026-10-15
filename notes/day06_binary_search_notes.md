@@ -17,6 +17,7 @@ index** (35). Language: Python.
 | 367 Valid Perfect Square | Values, existence check | 🟢 clean | O(log n) | O(1) | `day07/02_valid_perfect_square.py` |
 | 278 First Bad Version | Boundary — first True | 🟢 (1 fix) | O(log n) | O(1) | `day07/03_first_bad_version.py` |
 | 34 First & Last Position | Duplicates — two boundary searches | 🟢 (key insight) | O(log n) | O(1) | `day07/04_first_last_position.py` |
+| 744 Next Greatest Letter | First strictly greater + wrap-around | 🟢 | O(log n) | O(1) | `day07/05_next_greatest_letter.py` |
 
 ## The core template (A — exact match)
 
@@ -96,6 +97,21 @@ land on the boundary:
 
 This "push equal toward the boundary" idea returns in 744, 852, 162, and the
 Level-4 "binary search on the answer" problems.
+
+## Wrap-around with `%` (744)
+
+744 wants the first letter strictly `> target`, wrapping to `letters[0]` if none.
+After the loop `l` is in `[0, len]`. Reach for `%` whenever the logic is
+**"wrap around / circular"**:
+
+```python
+return letters[l % len(letters)]   # l < len -> letters[l];  l == len -> letters[0]
+```
+
+It's just a one-line form of `if l == len: return letters[0]; else return letters[l]`.
+`%` doesn't create the logic — write the `if` version first (shows you reasoned
+the two cases), then compress. Same tool as a clock (`13 % 12 == 1`) or the next
+element in a circular array (`nums[(i + 1) % n]`).
 
 ## Searching indices vs values
 
