@@ -13,6 +13,10 @@ index** (35). Language: Python.
 | 704 Binary Search | Template A (exact match) | 🟡 (5 bugs) | O(log n) | O(1) | `day06/01_binary_search.py` |
 | 374 Guess Number | Template A over values 1..n | 🟡 (6 bugs) | O(log n) | O(1) | `day06/02_guess_number.py` |
 | 35 Search Insert Position | Boundary / insert index | 🟢 clean | O(log n) | O(1) | `day06/03_search_insert_position.py` |
+| 69 Sqrt(x) | Values + floor return | 🟡 (4 bugs) | O(log x) | O(1) | `day07/01_sqrt.py` |
+| 367 Valid Perfect Square | Values, existence check | 🟢 clean | O(log n) | O(1) | `day07/02_valid_perfect_square.py` |
+| 278 First Bad Version | Boundary — first True | 🟢 (1 fix) | O(log n) | O(1) | `day07/03_first_bad_version.py` |
+| 34 First & Last Position | Duplicates — two boundary searches | 🟢 (key insight) | O(log n) | O(1) | `day07/04_first_last_position.py` |
 
 ## The core template (A — exact match)
 
@@ -61,6 +65,38 @@ At all times: everything left of `low` is `< target`, everything right of
 first index with value `>= target` — exactly where target belongs. Being able
 to say this out loud is what separates "memorized" from "understood".
 
+## Which pointer holds the answer after the loop? (Template A, no exact match)
+
+After a Template A loop ends with `low > high`, the two pointers straddle the
+boundary — and **which one you return depends on the question**:
+
+| Problem | Returns | Meaning |
+| ------- | ------- | ------- |
+| 35 Search Insert | `low`  | first value that is **>= target** (insert position) |
+| 69 Sqrt(x)       | `high` | last value whose square **fits** (floor / rounded down) |
+| 367 Perfect Square | — | only need existence → `return False` after the loop |
+| 278 First Bad    | `low`  | first **bad** version (first True) |
+| 34 first / last  | `low` / `high` | first index `>= target` / last index `<= target` |
+
+Same loop, different question: `low` = "first too big / first True", `high` = "last that fits".
+
+## Duplicates: NEVER return on `==`
+
+When the array has duplicates (34), a match at `mid` only proves the target
+**exists** — it might not be the first or last one. So don't return on `==`.
+Instead push the `==` case toward the side you're hunting and let `low`/`high`
+land on the boundary:
+
+- **First position:** on `==`, go **left** (`high = mid - 1`) → `low` ends on the first index `>= target`.
+- **Last position:** on `==`, go **right** (`low = mid + 1`) → `high` ends on the last index `<= target`.
+
+> "equal, go left" feels like throwing away a match, but it's safe: if `mid`
+> really was the first one, `low` walks back and lands on it. The invariant
+> guarantees the answer is never lost.
+
+This "push equal toward the boundary" idea returns in 744, 852, 162, and the
+Level-4 "binary search on the answer" problems.
+
 ## Searching indices vs values
 
 - **704:** search the indices `0 .. len-1` of an array.
@@ -69,11 +105,13 @@ to say this out loud is what separates "memorized" from "understood".
 
 ## Recurring checklist (run before submitting ANY binary search)
 
-1. Comparing `nums[mid]`, not `mid`?
-2. Inclusive bounds → `while low <= high` (Template A).
-3. Parentheses: `(low + high) // 2`.
-4. Returning what's asked — index or value?
-5. Search space — indices (`0..len-1`) or values (`1..n`)?
+1. Inclusive bounds → `while low <= high` (Template A). *(Write this line FIRST — missed it on 704, 374, and 69.)*
+2. **Same variable names everywhere** — don't declare `l, h` then update `low, high` (looks right, does nothing → infinite loop).
+3. Comparing `nums[mid]` / `mid*mid`, not `mid` itself?
+4. Parentheses: `(low + high) // 2`.
+5. Does `low` cover the smallest possible answer (e.g. `0` for Sqrt)?
+6. Is there a `return` after the loop?
+7. Return value — `low` (just above) or `high` (just below)? Index or value?
 
 > Overflow note: in C++/Java `low + high` can overflow, so use
 > `low + (high - low) // 2`. Python ints don't overflow, but mention it.
