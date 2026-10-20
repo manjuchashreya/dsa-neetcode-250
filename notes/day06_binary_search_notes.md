@@ -20,6 +20,7 @@ index** (35). Language: Python.
 | 744 Next Greatest Letter | First strictly greater + wrap-around | 🟢 | O(log n) | O(1) | `day07/05_next_greatest_letter.py` |
 | 852 Peak in Mountain Array | Neighbor compare (no target) | 🟢 (2 bugs) | O(log n) | O(1) | `day07/06_peak_index_mountain_array.py` |
 | 162 Find Peak Element | Neighbor compare, multiple peaks | 🟢 (OOB fix) | O(log n) | O(1) | `day07/07_find_peak_element.py` |
+| 74 Search a 2D Matrix | Flatten grid → 1D binary search | 🟢 (revision) | O(log mn) | O(1) | `day07/08_search_2d_matrix.py` |
 
 ## The core template (A — exact match)
 
@@ -143,6 +144,22 @@ safe. In 162 the peak *can* be last (`[1,2,3]`), so the naive copy crashes.
 Fix: `h = len-2` (Option 1, keeps `<=`) or Template B (`h=len-1`, `while l<h`,
 `h=mid`). **Lesson: when you reuse a solution, re-check every array access
 against the new constraints.**
+
+## Flatten a grid into 1D (74)
+
+When a matrix is fully sorted row-by-row, treat the `m*n` cells as one virtual
+sorted array (indices `0 .. m*n-1`) and run plain 704 on it. Convert each 1D
+index to a cell:
+
+```
+row = mid // cols   # how many FULL rows come before this index
+col = mid %  cols   # how far INTO that row (leftover)
+```
+
+Reverse (to verify): `index = row * cols + col`. Divide by **cols** (not rows)
+because a new row begins every `cols` cells — the row length is what makes the
+index wrap. Same `//` + `%` pair as the 744 wrap-around, used to split one
+number into (quotient, remainder).
 
 ## Recurring checklist (run before submitting ANY binary search)
 

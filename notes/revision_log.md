@@ -6,6 +6,7 @@ original solve. Legend: 🟢 solved cleanly · 🟡 correct but needed a correct
 | Date | Problem | Status | Notes |
 | ---- | ------- | ------ | ----- |
 | Aug 23 | Two Sum | 🟡 Yellow | Algorithm was right; only C++ syntax and the lookup condition needed correction (wrote `.count()` / `map[k]=v` Python-style). See `cpp_vs_python_cheatsheet.md`. |
+| Oct 20 | 74 Search a 2D Matrix | 🟢 Green | Clean re-solve. Solid on the `mid//cols` (row) / `mid%cols` (col) flatten mapping. `day07/08_search_2d_matrix.py`. |
 
 ## Takeaways so far
 
