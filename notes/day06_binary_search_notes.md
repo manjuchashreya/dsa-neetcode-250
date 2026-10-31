@@ -21,6 +21,8 @@ index** (35). Language: Python.
 | 852 Peak in Mountain Array | Neighbor compare (no target) | 🟢 (2 bugs) | O(log n) | O(1) | `day07/06_peak_index_mountain_array.py` |
 | 162 Find Peak Element | Neighbor compare, multiple peaks | 🟢 (OOB fix) | O(log n) | O(1) | `day07/07_find_peak_element.py` |
 | 74 Search a 2D Matrix | Flatten grid → 1D binary search | 🟢 (revision) | O(log mn) | O(1) | `day07/08_search_2d_matrix.py` |
+| 153 Find Min in Rotated Array | Rotated — fixed-landmark compare | 🟡 (concept bug) | O(log n) | O(1) | `day07/09_find_min_rotated.py` |
+| 1011 Capacity to Ship Packages | **Binary search on the ANSWER** | 🟢 | O(n log S) | O(1) | `day07/10_capacity_to_ship_packages.py` |
 
 ## The core template (A — exact match)
 
@@ -160,6 +162,38 @@ Reverse (to verify): `index = row * cols + col`. Divide by **cols** (not rows)
 because a new row begins every `cols` cells — the row length is what makes the
 index wrap. Same `//` + `%` pair as the 744 wrap-around, used to split one
 number into (quotient, remainder).
+
+## Rotated arrays — compare against a FIXED landmark (153)
+
+A rotation splits the array into a HIGH piece then a LOW piece:
+`[ 4 5 6 7 | 0 1 2 ]`. Compare `nums[mid]` to a landmark that **never moves**
+during the search — `nums[-1]` (the last element):
+
+- `nums[mid] <= nums[-1]` → mid is in the LOW piece → min is mid or left (`h = mid - 1`)
+- else → mid is in the HIGH piece → min is to the right (`l = mid + 1`)
+
+`l` ends on the minimum.
+
+> **The rule:** never compare against the pointer you're actively moving
+> (`nums[l]`) — its meaning shifts mid-search and `l` can walk right past the
+> answer. Use a fixed landmark (`nums[-1]`, or `nums[h]` in 33).
+> Why not `nums[0]`? It can't distinguish "not rotated" from "high piece"
+> (both have every element `>= nums[0]`), so it throws away the needed info.
+
+## Binary search on the ANSWER (1011) — Level 4
+
+No array to search — the search space is the **candidate answers**, and a
+feasibility test gives a monotone ❌❌❌✅✅✅ (once a value works, all larger
+ones do). Binary-search for the first ✅. Recipe:
+
+1. **Bounds:** smallest possible answer → `low`, largest → `high`
+   (1011: `low = max(weights)`, `high = sum(weights)`).
+2. **Feasibility fn** `can(x)` — often greedy, O(n).
+3. **Template B:** `if can(mid): h = mid else: l = mid + 1`; return `l`.
+
+Trigger phrases: "minimum/maximum X such that…", "smallest capacity/speed/…
+that fits a constraint". Same idea powers Koko Eating Bananas, Split Array
+Largest Sum, etc.
 
 ## Recurring checklist (run before submitting ANY binary search)
 
